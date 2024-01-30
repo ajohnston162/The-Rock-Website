@@ -23,6 +23,65 @@ import Introductionvideo from "../components/introductionvideo.astro";
 
     <body>
         
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"> 
+                    <!-- The current png is 241 by 100 px, so this styling halves that to shrink it proportionately -->
+                    <img src="/images/rock-logo-white.png" style="width: 120px; height: 50px" alt="The Rock">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/worship">Worship</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/news">News</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/about-us/beliefs-history">Beliefs & History</a></li>
+                                <li><a class="dropdown-item" href="/about-us/mission-vision">Mission & Vision</a></li>
+                                <li><a class="dropdown-item" href="/about-us/pastor-leaders">Pastor & Leaders</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Connect
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/connect/children">Children</a></li>
+                                <li><a class="dropdown-item" href="/connect/jr-high">Jr. High</a></li>
+                                <li><a class="dropdown-item" href="/connect/high-school">High School</a></li>
+                                <li><a class="dropdown-item" href="/connect/adults">Adults</a></li>
+                                <li><a class="dropdown-item" href="/connect/comfort-dog">Comfort Dog</a></li>
+                                <li><a class="dropdown-item" href="/connect/beyond-borders">Beyond Borders</a></li>
+                                <li><a class="dropdown-item" href="/connect/serve">Serve</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/resources/contact">Contact</a></li>
+                                <li><a class="dropdown-item" href="/resources/giving">Giving</a></li>
+                                <li><a class="dropdown-item" href="/resources/links">Links</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <Introductionvideo>
 
@@ -31,7 +90,7 @@ import Introductionvideo from "../components/introductionvideo.astro";
                     <div class="container-fluid ">
                         <a class="navbar-brand" href="/"> 
                             <!-- The current png is 241 by 100 px, so this styling halves that to shrink it proportionately -->
-                            <img src="/public/images/rock-logo.png" style="width: 120px; height: 50px" alt="The Rock">
+                            <img src="/images/rock-logo-white.png" style="width: 120px; height: 50px" alt="The Rock">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
