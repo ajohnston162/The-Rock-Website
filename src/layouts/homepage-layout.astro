@@ -1,3 +1,9 @@
+---
+import Footer from "./footer.astro";
+
+import Introductionvideo from "../components/introductionvideo.astro";
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +17,43 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
 
+    <style>
+     .hero {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        padding-bottom: 100px; 
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+    }
+
+    .hero-body {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .video-bg {
+        width: 100%;
+        object-fit: cover; /* use "cover" to avoid distortion */
+        position: absolute;
+        z-index: -1; 
+        filter: brightness(50%);
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    </style>
+
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-transparent">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/"> <!-- The current png is 241 by 100 px, so this styling halves that to shrink it proportionately -->
+                <a class="navbar-brand" href="/"> 
+                    <!-- The current png is 241 by 100 px, so this styling halves that to shrink it proportionately -->
                     <img src="/public/images/rock-logo.png" style="width: 120px; height: 50px" alt="The Rock">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -24,12 +63,12 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/worship">Worship</a>
+                            <a class="nav-link" aria-current="page" href="/worship">Worship</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/news">News</a>
+                            <a class="nav-link" aria-current="page" href="/news">News</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 About Us
@@ -66,19 +105,17 @@
                                 <li><a class="dropdown-item" href="/resources/links">Links</a></li>
                             </ul>
                         </li>
-                        <a href="https://www.facebook.com/therockseward/" style="text-decoration: none;">
-                            <i class="bi-facebook" style="font-size: 1.75rem; color: #1877F2; margin: 10px"></i>
-                        </a>
-                        <a href="https://www.youtube.com/c/TheRockSewardNebraska" style="text-decoration: none;">
-                            <i class="bi-youtube" style="font-size: 1.75rem; color: #FF0000; margin: 10px"></i>
-                        </a>
-                        <a href="https://vimeo.com/therockseward" style="text-decoration: none;">
-                            <i class="bi-vimeo" style="font-size: 1.75rem; color: #1AB7EA; margin: 10px"></i>
-                        </a>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <Introductionvideo />
+
+        <slot />
+
+        <Footer />
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>

@@ -23,8 +23,8 @@
     .video-bg {
         width: 100%;
         object-fit: cover; /* use "cover" to avoid distortion */
-        position: absolute;
-        z-index: -1; 
+        position: relative;
+        z-index: 2; 
         filter: brightness(50%);
         top: 0;
         left: 0;
@@ -36,13 +36,12 @@
 
     <body>
         <!-- Where first impressions are made. -->
-
-
+        
         <div class="hero">
 
             <!-- Video that's playing on the front page. -->
             <video playsinline autoplay loop muted class="video-bg" id="introduction-video">
-                <source src="/videos/introduction-video.mp4" type="video/mp4">
+                <source src="/videos/promo-video.mp4" type="video/mp4">
             </video>
 
         </div>
